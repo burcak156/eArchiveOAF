@@ -32,7 +32,7 @@ select EINV_INVOICE_ID,
         0 as detail_flag,
         'N' as selected_flag,
         select_switcher,
-        color_switcher
+        color_switcher,pdf_switcher,download_switcher
   from  xxxt_earchive_header_sc_v
    ]]></SQLQuery>
    <DesignTime>
@@ -260,6 +260,32 @@ select EINV_INVOICE_ID,
       SQLType="VARCHAR" >
       <DesignTime>
          <Attr Name="_DisplaySize" Value="6" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="PdfSwitcher"
+      IsPersistent="false"
+      Precision="19"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="PDF_SWITCHER"
+      Expression="PDF_SWITCHER"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="19" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DownloadSwitcher"
+      IsPersistent="false"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="DOWNLOAD_SWITCHER"
+      Expression="DOWNLOAD_SWITCHER"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
       </DesignTime>
    </ViewAttribute>
    <ViewLinkAccessor

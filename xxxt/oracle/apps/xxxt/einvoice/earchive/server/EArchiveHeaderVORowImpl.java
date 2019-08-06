@@ -30,8 +30,10 @@ public class EArchiveHeaderVORowImpl extends OAViewRowImpl {
     public static final int SELECTEDFLAG = 15;
     public static final int SELECTSWITCHER = 16;
     public static final int COLORSWITCHER = 17;
-    public static final int EARCHIVELINESVO = 18;
-    public static final int EARCHIVENOTESVO = 19;
+    public static final int PDFSWITCHER = 18;
+    public static final int DOWNLOADSWITCHER = 19;
+    public static final int EARCHIVELINESVO = 20;
+    public static final int EARCHIVENOTESVO = 21;
 
     /**This is the default constructor (do not remove)
      */
@@ -92,6 +94,10 @@ public class EArchiveHeaderVORowImpl extends OAViewRowImpl {
             return getSelectSwitcher();
         case COLORSWITCHER:
             return getColorSwitcher();
+        case PDFSWITCHER:
+            return getPdfSwitcher();
+        case DOWNLOADSWITCHER:
+            return getDownloadSwitcher();
         case EARCHIVELINESVO:
             return getEArchiveLinesVO();
         case EARCHIVENOTESVO:
@@ -159,6 +165,12 @@ public class EArchiveHeaderVORowImpl extends OAViewRowImpl {
             return;
         case COLORSWITCHER:
             setColorSwitcher((String)value);
+            return;
+        case PDFSWITCHER:
+            setPdfSwitcher((String)value);
+            return;
+        case DOWNLOADSWITCHER:
+            setDownloadSwitcher((String)value);
             return;
         default:
             super.setAttrInvokeAccessor(index, value, attrDef);
@@ -380,5 +392,29 @@ public class EArchiveHeaderVORowImpl extends OAViewRowImpl {
      */
     public void setColorSwitcher(String value) {
         setAttributeInternal(COLORSWITCHER, value);
+    }
+
+    /**Gets the attribute value for the calculated attribute PdfSwitcher
+     */
+    public String getPdfSwitcher() {
+        return (String) getAttributeInternal(PDFSWITCHER);
+    }
+
+    /**Sets <code>value</code> as the attribute value for the calculated attribute PdfSwitcher
+     */
+    public void setPdfSwitcher(String value) {
+        setAttributeInternal(PDFSWITCHER, value);
+    }
+
+    /**Gets the attribute value for the calculated attribute DownloadSwitcher
+     */
+    public String getDownloadSwitcher() {
+        return (String) getAttributeInternal(DOWNLOADSWITCHER);
+    }
+
+    /**Sets <code>value</code> as the attribute value for the calculated attribute DownloadSwitcher
+     */
+    public void setDownloadSwitcher(String value) {
+        setAttributeInternal(DOWNLOADSWITCHER, value);
     }
 }

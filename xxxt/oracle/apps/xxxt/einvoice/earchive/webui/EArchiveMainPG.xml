@@ -222,15 +222,38 @@
                                     <oa:messageStyledText id="Email" dataType="VARCHAR2" prompt="ePosta" viewName="EArchiveHeaderVO1" viewAttr="Email"/>
                                     <oa:formValue id="StatusId" dataType="NUMBER" prompt="StatusId" viewName="EArchiveHeaderVO1" viewAttr="StatusId"/>
                                     <oa:messageStyledText id="StatusName" dataType="VARCHAR2" prompt="Statü" viewName="EArchiveHeaderVO1" viewAttr="StatusName" maximumLength="50"/>
-                                    <oa:image id="downloadPdf" prompt="PDF İndir" source="viewreport_enabled.gif">
-                                       <ui:primaryClientAction>
-                                          <ui:fireAction event="xview">
-                                             <ui:parameters>
-                                                <ui:parameter key="xid" value="${oa.EArchiveHeaderVO1.EinvInvoiceId}"/>
-                                             </ui:parameters>
-                                          </ui:fireAction>
-                                       </ui:primaryClientAction>
-                                    </oa:image>
+                                    <oa:switcher id="region13181" viewName="EArchiveHeaderVO1" viewAttr="DownloadSwitcher" prompt="PDF İndir">
+                                       <ui:case name="enabled_downloadPdf">
+                                          <oa:image id="enabled_downloadPdf" prompt="" source="file_pdf.gif">
+                                             <ui:primaryClientAction>
+                                                <ui:fireAction event="xdownload" id="fireAction52">
+                                                   <ui:parameters>
+                                                      <ui:parameter key="xid" value="${oa.EArchiveHeaderVO1.EinvInvoiceId}"/>
+                                                   </ui:parameters>
+                                                </ui:fireAction>
+                                             </ui:primaryClientAction>
+                                          </oa:image>
+                                       </ui:case>
+                                       <ui:case name="disabled_downloadPdf">
+                                          <oa:image id="disabled_downloadPdf" prompt="" source="file_pdf_disabled.gif"/>
+                                       </ui:case>
+                                    </oa:switcher>
+                                    <oa:switcher id="region1318" viewName="EArchiveHeaderVO1" viewAttr="PdfSwitcher" prompt="Önizleme">
+                                       <ui:case name="enabled_previewPdf">
+                                          <oa:image id="enabled_previewPdf" prompt="" source="viewreport_enabled.gif">
+                                             <ui:primaryClientAction>
+                                                <ui:fireAction event="xview" id="fireAction5">
+                                                   <ui:parameters>
+                                                      <ui:parameter key="xid" value="${oa.EArchiveHeaderVO1.EinvInvoiceId}"/>
+                                                   </ui:parameters>
+                                                </ui:fireAction>
+                                             </ui:primaryClientAction>
+                                          </oa:image>
+                                       </ui:case>
+                                       <ui:case name="disabled_previewPdf">
+                                          <oa:image id="disabled_previewPdf" prompt="" source="viewrights_disabled.gif"/>
+                                       </ui:case>
+                                    </oa:switcher>
                                  </ui:contents>
                                  <ui:detail>
                                     <oa:header id="region1312">
@@ -279,6 +302,11 @@
                   <oa:submitButton id="xUpdateEmail" text="Eposta Güncelle" prompt="Eposta Güncelle">
                      <ui:primaryClientAction>
                         <ui:fireAction event="xUpdateEmail" id="fireAction4"/>
+                     </ui:primaryClientAction>
+                  </oa:submitButton>
+                  <oa:submitButton id="xDraftCancel" text="Taslak İptali" prompt="Taslak İptali">
+                     <ui:primaryClientAction>
+                        <ui:fireAction event="xDraftCancel"/>
                      </ui:primaryClientAction>
                   </oa:submitButton>
                </ui:contents>
