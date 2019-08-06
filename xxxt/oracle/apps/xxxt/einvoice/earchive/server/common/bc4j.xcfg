@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig>
+   <AppModuleConfigBag>
+      <AppModuleConfig name="EArchiveAMLocal">
+         <DeployPlatform>LOCAL</DeployPlatform>
+         <jbo.project>EArsiv</jbo.project>
+         <AppModuleJndiName>xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveAM</AppModuleJndiName>
+         <java.naming.factory.initial>oracle.jbo.common.JboInitialContextFactory</java.naming.factory.initial>
+         <ApplicationName>xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveAM</ApplicationName>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

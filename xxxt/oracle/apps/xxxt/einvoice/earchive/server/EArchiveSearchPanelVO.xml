@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="EArchiveSearchPanelVO"
+   BindingStyle="OracleName"
+   CustomQuery="true"
+   RowClass="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveSearchPanelVORowImpl"
+   ComponentClass="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveSearchPanelVOImpl"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+select null as e_arsiv_no,
+null as tckn_vkn,
+null as firma_adi,
+null as fatura_tarihi_baslangic,
+null as fatura_tarihi_bitis,
+null as status,
+null as fatura_gonderim_baslangic,
+null as fatura_gonderim_bitis,
+null as source
+from dual
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_isExpertMode" Value="true" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+      <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess" />
+   </DesignTime>
+   <ViewAttribute
+      Name="EArsivNo"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="E_ARSIV_NO"
+      Expression="E_ARSIV_NO"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="TcknVkn"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="TCKN_VKN"
+      Expression="TCKN_VKN"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="FirmaAdi"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="FIRMA_ADI"
+      Expression="FIRMA_ADI"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="FaturaTarihiBaslangic"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      AliasName="FATURA_TARIHI_BASLANGIC"
+      Expression="FATURA_TARIHI_BASLANGIC"
+      SQLType="DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="FaturaTarihiBitis"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      AliasName="FATURA_TARIHI_BITIS"
+      Expression="FATURA_TARIHI_BITIS"
+      SQLType="DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Status"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="STATUS"
+      Expression="STATUS"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="FaturaGonderimBaslangic"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      AliasName="FATURA_GONDERIM_BASLANGIC"
+      Expression="FATURA_GONDERIM_BASLANGIC"
+      SQLType="DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="FaturaGonderimBitis"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      AliasName="FATURA_GONDERIM_BITIS"
+      Expression="FATURA_GONDERIM_BITIS"
+      SQLType="DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Source"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="SOURCE"
+      Expression="SOURCE"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="server"
+   SeparateXMLFiles="true"
+   PackageName="xxxt.oracle.apps.xxxt.einvoice.earchive.lov.server" >
+   <DesignTime>
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+   </DesignTime>
+   <Containee
+      Name="EArchiveSourcesVO"
+      FullName="xxxt.oracle.apps.xxxt.einvoice.earchive.lov.server.EArchiveSourcesVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="EArchiveStatusesVO"
+      FullName="xxxt.oracle.apps.xxxt.einvoice.earchive.lov.server.EArchiveStatusesVO"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

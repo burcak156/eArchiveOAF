@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="server"
+   SeparateXMLFiles="true"
+   PackageName="xxxt.oracle.apps.xxxt.einvoice.earchive.server" >
+   <DesignTime>
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+   </DesignTime>
+   <Containee
+      Name="EArchiveAM"
+      FullName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveAM"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="EArchiveHeaderToLineVL"
+      FullName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveHeaderToLineVL"
+      ObjectType="ViewLink" >
+   </Containee>
+   <Containee
+      Name="EArchiveHeaderToNoteVL"
+      FullName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveHeaderToNoteVL"
+      ObjectType="ViewLink" >
+   </Containee>
+   <Containee
+      Name="EArchiveHeaderVO"
+      FullName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveHeaderVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="EArchiveLinesVO"
+      FullName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveLinesVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="EArchiveNotesVO"
+      FullName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveNotesVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="EArchiveSearchPanelVO"
+      FullName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveSearchPanelVO"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

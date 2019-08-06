@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+
+<ViewLink
+   Name="EArchiveHeaderToNoteVL" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+   </DesignTime>
+   <ViewLinkDefEnd
+      Name="EArchiveHeaderVO"
+      Cardinality="1"
+      Owner="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveHeaderVO"
+      Source="true" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveHeaderVO.EinvInvoiceId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_finderName" Value="EArchiveHeaderVO" />
+         <Attr Name="_accessor" Value="true" />
+         <Attr Name="_isUpdateable" Value="true" />
+      </DesignTime>
+   </ViewLinkDefEnd>
+   <ViewLinkDefEnd
+      Name="EArchiveNotesVO"
+      Cardinality="-1"
+      Owner="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveNotesVO" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveNotesVO.EinvInvoiceId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_finderName" Value="EArchiveNotesVO" />
+         <Attr Name="_isUpdateable" Value="true" />
+      </DesignTime>
+   </ViewLinkDefEnd>
+</ViewLink>

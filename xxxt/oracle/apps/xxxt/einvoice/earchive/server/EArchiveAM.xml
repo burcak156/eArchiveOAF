@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='windows-1254' ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="EArchiveAM"
+   ComponentClass="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveAMImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="EArchiveSearchPanelVO1"
+      ViewObjectName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveSearchPanelVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="EArchiveStatusesVO1"
+      ViewObjectName="xxxt.oracle.apps.xxxt.einvoice.earchive.lov.server.EArchiveStatusesVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="EArchiveSourcesVO1"
+      ViewObjectName="xxxt.oracle.apps.xxxt.einvoice.earchive.lov.server.EArchiveSourcesVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="EArchiveHeaderVO1"
+      ViewObjectName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveHeaderVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="EArchiveLinesVO1"
+      ViewObjectName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveLinesVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="EArchiveNotesVO1"
+      ViewObjectName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveNotesVO" >
+   </ViewUsage>
+   <ViewLinkUsage
+      Name="EArchiveHeaderToLineVL1"
+      ViewLinkObjectName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveHeaderToLineVL"
+      SrcViewUsageName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveAM.EArchiveHeaderVO1"
+      DstViewUsageName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveAM.EArchiveLinesVO1" >
+      <DesignTime>
+         <Attr Name="_isCodegen" Value="true" />
+         <Attr Name="_version" Value="10.1.3.43.6" />
+      </DesignTime>
+   </ViewLinkUsage>
+   <ViewLinkUsage
+      Name="EArchiveHeaderToNoteVL1"
+      ViewLinkObjectName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveHeaderToNoteVL"
+      SrcViewUsageName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveAM.EArchiveHeaderVO1"
+      DstViewUsageName="xxxt.oracle.apps.xxxt.einvoice.earchive.server.EArchiveAM.EArchiveNotesVO1" >
+      <DesignTime>
+         <Attr Name="_isCodegen" Value="true" />
+         <Attr Name="_version" Value="10.1.3.43.6" />
+      </DesignTime>
+   </ViewLinkUsage>
+</AppModule>
