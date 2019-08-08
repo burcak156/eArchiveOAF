@@ -32,8 +32,12 @@ public class EArchiveHeaderVORowImpl extends OAViewRowImpl {
     public static final int COLORSWITCHER = 17;
     public static final int PDFSWITCHER = 18;
     public static final int DOWNLOADSWITCHER = 19;
-    public static final int EARCHIVELINESVO = 20;
-    public static final int EARCHIVENOTESVO = 21;
+    public static final int INVOICETYPECODE = 20;
+    public static final int REPORTDATE = 21;
+    public static final int CANCELDATE = 22;
+    public static final int CANCELINVREPORTDATE = 23;
+    public static final int EARCHIVELINESVO = 24;
+    public static final int EARCHIVENOTESVO = 25;
 
     /**This is the default constructor (do not remove)
      */
@@ -98,6 +102,14 @@ public class EArchiveHeaderVORowImpl extends OAViewRowImpl {
             return getPdfSwitcher();
         case DOWNLOADSWITCHER:
             return getDownloadSwitcher();
+        case INVOICETYPECODE:
+            return getInvoiceTypeCode();
+        case REPORTDATE:
+            return getReportDate();
+        case CANCELDATE:
+            return getCancelDate();
+        case CANCELINVREPORTDATE:
+            return getCancelInvReportDate();
         case EARCHIVELINESVO:
             return getEArchiveLinesVO();
         case EARCHIVENOTESVO:
@@ -171,6 +183,18 @@ public class EArchiveHeaderVORowImpl extends OAViewRowImpl {
             return;
         case DOWNLOADSWITCHER:
             setDownloadSwitcher((String)value);
+            return;
+        case INVOICETYPECODE:
+            setInvoiceTypeCode((String)value);
+            return;
+        case REPORTDATE:
+            setReportDate((String)value);
+            return;
+        case CANCELDATE:
+            setCancelDate((String)value);
+            return;
+        case CANCELINVREPORTDATE:
+            setCancelInvReportDate((String)value);
             return;
         default:
             super.setAttrInvokeAccessor(index, value, attrDef);
@@ -416,5 +440,53 @@ public class EArchiveHeaderVORowImpl extends OAViewRowImpl {
      */
     public void setDownloadSwitcher(String value) {
         setAttributeInternal(DOWNLOADSWITCHER, value);
+    }
+
+    /**Gets the attribute value for the calculated attribute InvoiceTypeCode
+     */
+    public String getInvoiceTypeCode() {
+        return (String) getAttributeInternal(INVOICETYPECODE);
+    }
+
+    /**Sets <code>value</code> as the attribute value for the calculated attribute InvoiceTypeCode
+     */
+    public void setInvoiceTypeCode(String value) {
+        setAttributeInternal(INVOICETYPECODE, value);
+    }
+
+    /**Gets the attribute value for the calculated attribute ReportDate
+     */
+    public String getReportDate() {
+        return (String) getAttributeInternal(REPORTDATE);
+    }
+
+    /**Sets <code>value</code> as the attribute value for the calculated attribute ReportDate
+     */
+    public void setReportDate(String value) {
+        setAttributeInternal(REPORTDATE, value);
+    }
+
+    /**Gets the attribute value for the calculated attribute CancelDate
+     */
+    public String getCancelDate() {
+        return (String) getAttributeInternal(CANCELDATE);
+    }
+
+    /**Sets <code>value</code> as the attribute value for the calculated attribute CancelDate
+     */
+    public void setCancelDate(String value) {
+        setAttributeInternal(CANCELDATE, value);
+    }
+
+    /**Gets the attribute value for the calculated attribute CancelInvReportDate
+     */
+    public String getCancelInvReportDate() {
+        return (String) getAttributeInternal(CANCELINVREPORTDATE);
+    }
+
+    /**Sets <code>value</code> as the attribute value for the calculated attribute CancelInvReportDate
+     */
+    public void setCancelInvReportDate(String value) {
+        setAttributeInternal(CANCELINVREPORTDATE, value);
     }
 }

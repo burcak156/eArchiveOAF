@@ -12,123 +12,134 @@
                      <ui:contents>
                         <oa:cellFormat id="region7">
                            <ui:contents>
-                              <oa:header id="EArchiveSearchPanelVO1"/>
-                              <oa:tableLayout id="region8" hAlign="center">
+                              <oa:header id="EArchiveSearchPanelVO1">
                                  <ui:contents>
-                                    <oa:rowLayout id="region9">
+                                    <oa:tableLayout id="region8" hAlign="center">
                                        <ui:contents>
-                                          <oa:cellFormat id="region10">
+                                          <oa:rowLayout id="region9">
                                              <ui:contents>
-                                                <oa:staticStyledText id="EArsivNo_label" text="eArşiv No" prompt="eArşiv No" styleClass="OraDataText"/>
+                                                <oa:cellFormat id="region10">
+                                                   <ui:contents>
+                                                      <oa:staticStyledText id="EArsivNo_label" text="eArşiv No" prompt="eArşiv No" styleClass="OraDataText"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                                <oa:cellFormat id="region11">
+                                                   <ui:contents>
+                                                      <oa:messageTextInput id="EArsivNo" dataType="VARCHAR2" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="EArsivNo"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                                <oa:cellFormat id="region12">
+                                                   <ui:contents>
+                                                      <oa:staticStyledText id="source_label" text="Kaynak" prompt="Kaynak" styleClass="OraDataText"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                                <oa:cellFormat id="region13">
+                                                   <ui:contents>
+                                                      <oa:messageChoice id="Source" dataType="VARCHAR2" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="Source" pickListViewName="EArchiveSourcesVO1" pickListDispAttr="SourceName" pickListValAttr="SourceCode"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
                                              </ui:contents>
-                                          </oa:cellFormat>
-                                          <oa:cellFormat id="region11">
+                                          </oa:rowLayout>
+                                          <oa:rowLayout id="region93">
                                              <ui:contents>
-                                                <oa:messageTextInput id="EArsivNo" dataType="VARCHAR2" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="EArsivNo"/>
+                                                <oa:cellFormat id="region103">
+                                                   <ui:contents>
+                                                      <oa:staticStyledText id="TcknVkn_label" text="TCKN/VKN" prompt="TCKN/VKN" styleClass="OraDataText"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                                <oa:cellFormat id="region113">
+                                                   <ui:contents>
+                                                      <oa:messageTextInput id="TcknVkn" dataType="VARCHAR2" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="TcknVkn"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                                <oa:cellFormat id="region123">
+                                                   <ui:contents>
+                                                      <oa:staticStyledText id="Status_label" text="Statü" prompt="Statü" styleClass="OraDataText"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                                <oa:cellFormat id="region133">
+                                                   <ui:contents>
+                                                      <oa:messageChoice id="Status" dataType="VARCHAR2" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="Status" vAlign="top" pickListViewName="EArchiveStatusesVO1" pickListDispAttr="StatusName" pickListValAttr="StatusId"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
                                              </ui:contents>
-                                          </oa:cellFormat>
-                                          <oa:cellFormat id="region12">
+                                          </oa:rowLayout>
+                                          <oa:rowLayout id="region92">
                                              <ui:contents>
-                                                <oa:staticStyledText id="source_label" text="Kaynak" prompt="Kaynak" styleClass="OraDataText"/>
+                                                <oa:cellFormat id="region102">
+                                                   <ui:contents>
+                                                      <oa:staticStyledText id="FirmaAdi_label" text="Firma Adı" prompt="Firma Adı" styleClass="OraDataText"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                                <oa:cellFormat id="region112">
+                                                   <ui:contents>
+                                                      <oa:messageTextInput id="FirmaAdi" dataType="VARCHAR2" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="FirmaAdi"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                                <oa:cellFormat id="region122">
+                                                   <ui:contents>
+                                                      <oa:staticStyledText id="FaturaTipi_label" text="Fatura Tipi" prompt="Fatura Tipi" styleClass="OraDataText"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                                <oa:cellFormat id="region132">
+                                                   <ui:contents>
+                                                      <oa:messageTextInput id="FaturaTipi" viewName="EArchiveSearchPanelVO1" viewAttr="FaturaTipi"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
                                              </ui:contents>
-                                          </oa:cellFormat>
-                                          <oa:cellFormat id="region13">
+                                          </oa:rowLayout>
+                                          <oa:rowLayout id="region91">
                                              <ui:contents>
-                                                <oa:messageChoice id="Source" dataType="VARCHAR2" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="Source" pickListViewName="EArchiveSourcesVO1" pickListDispAttr="SourceName" pickListValAttr="SourceCode"/>
+                                                <oa:cellFormat id="region101">
+                                                   <ui:contents>
+                                                      <oa:staticStyledText id="FaturaTarihiBas_label" text="Fatura Tarihi Başlangıç" prompt="Fatura Tarihi Başlangıç" styleClass="OraDataText"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                                <oa:cellFormat id="region111">
+                                                   <ui:contents>
+                                                      <oa:messageTextInput id="FaturaTarihiBaslangic" dataType="DATE" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="FaturaTarihiBaslangic"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                                <oa:cellFormat id="region121">
+                                                   <ui:contents>
+                                                      <oa:staticStyledText id="FaturaTarihiBit_label1" text="Fatura Tarihi Bitiş" prompt="Fatura Tarihi Bitiş" styleClass="OraDataText"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                                <oa:cellFormat id="region131">
+                                                   <ui:contents>
+                                                      <oa:messageTextInput id="FaturaTarihiBitis" dataType="DATE" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="FaturaTarihiBitis"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
                                              </ui:contents>
-                                          </oa:cellFormat>
+                                          </oa:rowLayout>
+                                          <oa:rowLayout id="region911">
+                                             <ui:contents>
+                                                <oa:cellFormat id="region1011">
+                                                   <ui:contents>
+                                                      <oa:staticStyledText id="FaturaGonTarihiBas_label1" text="Fatura Gönderim Tarihi Başlangıç" prompt="Fatura Gönderim Tarihi Başlangıç" styleClass="OraDataText"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                                <oa:cellFormat id="region1111">
+                                                   <ui:contents>
+                                                      <oa:messageTextInput id="FaturaGonderimBaslangic" dataType="DATE" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="FaturaGonderimBaslangic"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                                <oa:cellFormat id="region1211">
+                                                   <ui:contents>
+                                                      <oa:staticStyledText id="FaturaGonTarihiBit_label11" text="Fatura Gönderim Tarihi Bitiş" prompt="Fatura Gönderim Tarihi Bitiş" styleClass="OraDataText"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                                <oa:cellFormat id="region1311">
+                                                   <ui:contents>
+                                                      <oa:messageTextInput id="FaturaGonderimBitis" dataType="DATE" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="FaturaGonderimBitis"/>
+                                                   </ui:contents>
+                                                </oa:cellFormat>
+                                             </ui:contents>
+                                          </oa:rowLayout>
                                        </ui:contents>
-                                    </oa:rowLayout>
-                                    <oa:rowLayout id="region93">
-                                       <ui:contents>
-                                          <oa:cellFormat id="region103">
-                                             <ui:contents>
-                                                <oa:staticStyledText id="TcknVkn_label" text="TCKN/VKN" prompt="TCKN/VKN" styleClass="OraDataText"/>
-                                             </ui:contents>
-                                          </oa:cellFormat>
-                                          <oa:cellFormat id="region113">
-                                             <ui:contents>
-                                                <oa:messageTextInput id="TcknVkn" dataType="VARCHAR2" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="TcknVkn"/>
-                                             </ui:contents>
-                                          </oa:cellFormat>
-                                          <oa:cellFormat id="region123">
-                                             <ui:contents>
-                                                <oa:staticStyledText id="Status_label" text="Statü" prompt="Statü" styleClass="OraDataText"/>
-                                             </ui:contents>
-                                          </oa:cellFormat>
-                                          <oa:cellFormat id="region133">
-                                             <ui:contents>
-                                                <oa:messageChoice id="Status" dataType="VARCHAR2" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="Status" vAlign="top" pickListViewName="EArchiveStatusesVO1" pickListDispAttr="StatusName" pickListValAttr="StatusId"/>
-                                             </ui:contents>
-                                          </oa:cellFormat>
-                                       </ui:contents>
-                                    </oa:rowLayout>
-                                    <oa:rowLayout id="region92">
-                                       <ui:contents>
-                                          <oa:cellFormat id="region102">
-                                             <ui:contents>
-                                                <oa:staticStyledText id="FirmaAdi_label" text="Firma Adı" prompt="Firma Adı" styleClass="OraDataText"/>
-                                             </ui:contents>
-                                          </oa:cellFormat>
-                                          <oa:cellFormat id="region112">
-                                             <ui:contents>
-                                                <oa:messageTextInput id="FirmaAdi" dataType="VARCHAR2" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="FirmaAdi"/>
-                                             </ui:contents>
-                                          </oa:cellFormat>
-                                          <oa:cellFormat id="region122"/>
-                                          <oa:cellFormat id="region132"/>
-                                       </ui:contents>
-                                    </oa:rowLayout>
-                                    <oa:rowLayout id="region91">
-                                       <ui:contents>
-                                          <oa:cellFormat id="region101">
-                                             <ui:contents>
-                                                <oa:staticStyledText id="FaturaTarihiBas_label" text="Fatura Tarihi Başlangıç" prompt="Fatura Tarihi Başlangıç" styleClass="OraDataText"/>
-                                             </ui:contents>
-                                          </oa:cellFormat>
-                                          <oa:cellFormat id="region111">
-                                             <ui:contents>
-                                                <oa:messageTextInput id="FaturaTarihiBaslangic" dataType="DATE" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="FaturaTarihiBaslangic"/>
-                                             </ui:contents>
-                                          </oa:cellFormat>
-                                          <oa:cellFormat id="region121">
-                                             <ui:contents>
-                                                <oa:staticStyledText id="FaturaTarihiBit_label1" text="Fatura Tarihi Bitiş" prompt="Fatura Tarihi Bitiş" styleClass="OraDataText"/>
-                                             </ui:contents>
-                                          </oa:cellFormat>
-                                          <oa:cellFormat id="region131">
-                                             <ui:contents>
-                                                <oa:messageTextInput id="FaturaTarihiBitis" dataType="DATE" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="FaturaTarihiBitis"/>
-                                             </ui:contents>
-                                          </oa:cellFormat>
-                                       </ui:contents>
-                                    </oa:rowLayout>
-                                    <oa:rowLayout id="region911">
-                                       <ui:contents>
-                                          <oa:cellFormat id="region1011">
-                                             <ui:contents>
-                                                <oa:staticStyledText id="FaturaGonTarihiBas_label1" text="Fatura Gönderim Tarihi Başlangıç" prompt="Fatura Gönderim Tarihi Başlangıç" styleClass="OraDataText"/>
-                                             </ui:contents>
-                                          </oa:cellFormat>
-                                          <oa:cellFormat id="region1111">
-                                             <ui:contents>
-                                                <oa:messageTextInput id="FaturaGonderimBaslangic" dataType="DATE" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="FaturaGonderimBaslangic"/>
-                                             </ui:contents>
-                                          </oa:cellFormat>
-                                          <oa:cellFormat id="region1211">
-                                             <ui:contents>
-                                                <oa:staticStyledText id="FaturaGonTarihiBit_label11" text="Fatura Gönderim Tarihi Bitiş" prompt="Fatura Gönderim Tarihi Bitiş" styleClass="OraDataText"/>
-                                             </ui:contents>
-                                          </oa:cellFormat>
-                                          <oa:cellFormat id="region1311">
-                                             <ui:contents>
-                                                <oa:messageTextInput id="FaturaGonderimBitis" dataType="DATE" prompt="" viewName="EArchiveSearchPanelVO1" viewAttr="FaturaGonderimBitis"/>
-                                             </ui:contents>
-                                          </oa:cellFormat>
-                                       </ui:contents>
-                                    </oa:rowLayout>
+                                    </oa:tableLayout>
                                  </ui:contents>
-                              </oa:tableLayout>
+                              </oa:header>
                            </ui:contents>
                         </oa:cellFormat>
                      </ui:contents>
@@ -211,6 +222,7 @@
                                     <oa:formValue id="EinvInvoiceId2" dataType="NUMBER" prompt="EınvInvoiceId" viewName="EArchiveHeaderVO1" viewAttr="EinvInvoiceId"/>
                                     <oa:messageStyledText id="OrganizationName" dataType="VARCHAR2" prompt="Faliyet Birimi" viewName="EArchiveHeaderVO1" viewAttr="OrganizationName" maximumLength="240"/>
                                     <oa:messageStyledText id="InternalSource" dataType="VARCHAR2" prompt="Kaynak Modul" viewName="EArchiveHeaderVO1" viewAttr="InternalSource" maximumLength="50"/>
+                                    <oa:messageStyledText id="InvoiceTypeCode" dataType="VARCHAR2" prompt="Fatura Tipi" viewName="EArchiveHeaderVO1" viewAttr="InvoiceTypeCode" maximumLength="50"/>
                                     <oa:messageStyledText id="InvoiceId" dataType="VARCHAR2" prompt="Fatura No" viewName="EArchiveHeaderVO1" viewAttr="InvoiceId" maximumLength="16"/>
                                     <oa:messageStyledText id="InvoiceDate" dataType="DATE" prompt="Fatura Tarihi" viewName="EArchiveHeaderVO1" viewAttr="InvoiceDate"/>
                                     <oa:messageStyledText id="SentDate" dataType="DATE" prompt="Gönderim Tarihi" viewName="EArchiveHeaderVO1" viewAttr="SentDate"/>
@@ -221,12 +233,15 @@
                                     <oa:messageStyledText id="PayableAmount" dataType="NUMBER" prompt="Tutar" viewName="EArchiveHeaderVO1" viewAttr="PayableAmount"/>
                                     <oa:messageStyledText id="Email" dataType="VARCHAR2" prompt="ePosta" viewName="EArchiveHeaderVO1" viewAttr="Email"/>
                                     <oa:formValue id="StatusId" dataType="NUMBER" prompt="StatusId" viewName="EArchiveHeaderVO1" viewAttr="StatusId"/>
+                                    <oa:messageStyledText id="ReportDate" dataType="VARCHAR2" prompt="Rapor Tarihi" viewName="EArchiveHeaderVO1" viewAttr="ReportDate"/>
+                                    <oa:messageStyledText id="CancelDate" dataType="VARCHAR2" prompt="İptal Tarihi" viewName="EArchiveHeaderVO1" viewAttr="CancelDate"/>
+                                    <oa:messageStyledText id="CancelInvReportDate" dataType="VARCHAR2" prompt="İptal Fatura Rapor Tarihi" viewName="EArchiveHeaderVO1" viewAttr="CancelInvReportDate"/>
                                     <oa:messageStyledText id="StatusName" dataType="VARCHAR2" prompt="Statü" viewName="EArchiveHeaderVO1" viewAttr="StatusName" maximumLength="50"/>
                                     <oa:switcher id="region13181" viewName="EArchiveHeaderVO1" viewAttr="DownloadSwitcher" prompt="PDF İndir">
                                        <ui:case name="enabled_downloadPdf">
                                           <oa:image id="enabled_downloadPdf" prompt="" source="file_pdf.gif">
                                              <ui:primaryClientAction>
-                                                <ui:fireAction event="xdownload" id="fireAction52">
+                                                <ui:fireAction event="xview" id="fireAction52">
                                                    <ui:parameters>
                                                       <ui:parameter key="xid" value="${oa.EArchiveHeaderVO1.EinvInvoiceId}"/>
                                                    </ui:parameters>
@@ -280,6 +295,25 @@
                                        </ui:contents>
                                     </oa:header>
                                  </ui:detail>
+                                 <ui:tableActions>
+                                    <oa:flowLayout id="region13182">
+                                       <ui:contents>
+                                          <oa:link id="SelectAllLink" text="Select All">
+                                             <ui:primaryClientAction>
+                                                <ui:firePartialAction event="xSelectAll"/>
+                                             </ui:primaryClientAction>
+                                          </oa:link>
+                                          <oa:spacer id="Spacer"/>
+                                          <oa:rawText id="Separator" prompt="" text="|"/>
+                                          <oa:spacer id="Spacer1"/>
+                                          <oa:link id="SelectNoneLink" text="Select None">
+                                             <ui:primaryClientAction>
+                                                <ui:firePartialAction event="xSelectNone" id="firePartialAction1"/>
+                                             </ui:primaryClientAction>
+                                          </oa:link>
+                                       </ui:contents>
+                                    </oa:flowLayout>
+                                 </ui:tableActions>
                               </oa:table>
                            </ui:contents>
                         </oa:cellFormat>

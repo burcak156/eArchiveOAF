@@ -52,30 +52,35 @@ public class EArchiveMainCO extends OAControllerImpl {
         EArchiveAMImpl am = 
             (EArchiveAMImpl)pageContext.getApplicationModule(webBean);
         String event = pageContext.getParameter("event");
-        if ("xSearch".equals(event)) {
-            am.initSearch();
-        } else if ("xClear".equals(event)) {
-            am.clearSearch();
-        } else if ("xSend".equals(event)) {
-            am.sendInvoices(pageContext);
-        } else if ("xCancel".equals(event)) {
-            am.cancelInvoices(pageContext);
-        } else if ("xUpdateEmail".equals(event)) {
-            am.updateEmailOfInvoices(pageContext);
-        } else if ("xview".equals(event)) {
-            String id = pageContext.getParameter("xid");
-            String fileName = null;
-            String fileType = null;
-            HttpServletResponse response = 
-                (HttpServletResponse)pageContext.getRenderingContext().getServletResponse();
-            am.getEInvoicePDF(Integer.parseInt(id), response);
+
+        String result = am.buttonValidation(pageContext, event);
+        if ("OK".equals(result)) {
+            if ("xSearch".equals(event)) {
+                am.initSearch();
+            } else if ("xClear".equals(event)) {
+                am.clearSearch();
+            } else if ("xSend".equals(event)) {
+                am.sendInvoices(pageContext);
+            } else if ("xCancel".equals(event)) {
+                am.cancelInvoices(pageContext);
+            } else if ("xUpdateEmail".equals(event)) {
+                am.updateEmailOfInvoices(pageContext);
+            } else if ("xview".equals(event)) {
+                String id = pageContext.getParameter("xid");
+                String fileName = null;
+                String fileType = null;
+                HttpServletResponse response = 
+                    (HttpServletResponse)pageContext.getRenderingContext().getServletResponse();
+                am.getEInvoicePDF(Integer.parseInt(id), response);
 
 
-        } else if ("xDraftCancel".equals(event)) {
-            am.cancelDraftInvoices(pageContext);
+            } else if ("xDraftCancel".equals(event)) {
+                am.cancelDraftInvoices(pageContext);
+            } else if ("xSelectAll".equals(event)) {
+                am.selectAll(pageContext);
+            } else if ("xSelectNone".equals(event)) {
+                am.selectNone(pageContext);
+            }
         }
-
-
     }
-
 }

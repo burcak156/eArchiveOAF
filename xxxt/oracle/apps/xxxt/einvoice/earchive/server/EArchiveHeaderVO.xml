@@ -32,7 +32,13 @@ select EINV_INVOICE_ID,
         0 as detail_flag,
         'N' as selected_flag,
         select_switcher,
-        color_switcher,pdf_switcher,download_switcher
+	color_switcher,
+	pdf_switcher,
+	download_switcher,
+	invoice_type_code,
+	report_date,
+	cancel_date,
+	cancel_inv_report_date
   from  xxxt_earchive_header_sc_v
    ]]></SQLQuery>
    <DesignTime>
@@ -287,6 +293,47 @@ select EINV_INVOICE_ID,
       <DesignTime>
          <Attr Name="_DisplaySize" Value="20" />
       </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="InvoiceTypeCode"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="INVOICE_TYPE_CODE"
+      Expression="INVOICE_TYPE_CODE"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ReportDate"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="REPORT_DATE"
+      Expression="REPORT_DATE"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CancelDate"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="CANCEL_DATE"
+      Expression="CANCEL_DATE"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CancelInvReportDate"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="CANCEL_INV_REPORT_DATE"
+      Expression="CANCEL_INV_REPORT_DATE"
+      SQLType="VARCHAR" >
    </ViewAttribute>
    <ViewLinkAccessor
       Name="EArchiveLinesVO"

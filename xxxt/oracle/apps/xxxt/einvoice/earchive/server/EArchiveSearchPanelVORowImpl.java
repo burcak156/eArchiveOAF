@@ -19,6 +19,7 @@ public class EArchiveSearchPanelVORowImpl extends OAViewRowImpl {
     public static final int FATURAGONDERIMBASLANGIC = 6;
     public static final int FATURAGONDERIMBITIS = 7;
     public static final int SOURCE = 8;
+    public static final int FATURATIPI = 9;
 
     /**This is the default constructor (do not remove)
      */
@@ -144,6 +145,8 @@ public class EArchiveSearchPanelVORowImpl extends OAViewRowImpl {
             return getFaturaGonderimBitis();
         case SOURCE:
             return getSource();
+        case FATURATIPI:
+            return getFaturaTipi();
         default:
             return super.getAttrInvokeAccessor(index, attrDef);
         }
@@ -181,6 +184,9 @@ public class EArchiveSearchPanelVORowImpl extends OAViewRowImpl {
         case SOURCE:
             setSource((String)value);
             return;
+        case FATURATIPI:
+            setFaturaTipi((String)value);
+            return;
         default:
             super.setAttrInvokeAccessor(index, value, attrDef);
             return;
@@ -197,5 +203,17 @@ public class EArchiveSearchPanelVORowImpl extends OAViewRowImpl {
      */
     public void setSource(String value) {
         setAttributeInternal(SOURCE, value);
+    }
+
+    /**Gets the attribute value for the calculated attribute FaturaTipi
+     */
+    public String getFaturaTipi() {
+        return (String) getAttributeInternal(FATURATIPI);
+    }
+
+    /**Sets <code>value</code> as the attribute value for the calculated attribute FaturaTipi
+     */
+    public void setFaturaTipi(String value) {
+        setAttributeInternal(FATURATIPI, value);
     }
 }
